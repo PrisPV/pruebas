@@ -27,6 +27,12 @@ Breadcrumbs::for('roles.edit', function ($trail, $role) {
   $trail->push('Edicion de rol: '.$role->name, route('roles.edit',$role));
 });
 
+//Areas
+Breadcrumbs::for('areas.index', function ($trail) {
+  $trail->parent('home');
+  $trail->push('Areas', route('areas.index'));
+});
+
 //Usuarios
 Breadcrumbs::for('users.index', function ($trail) {
   $trail->parent('home');

@@ -80,6 +80,11 @@
               <a class="nav-link" href="{{route('roles.index')}}">Roles</a>
             </li>
             @endcan
+            @can('areas.index')
+            <li class="nav-item">
+            <a class="nav-link" href="{{route('areas.index')}}">Areas</a>
+            </li>
+            @endcan
           </ul>
 
           <!-- Right Side Of Navbar -->

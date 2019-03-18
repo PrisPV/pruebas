@@ -30,6 +30,9 @@ Route::middleware(['auth'])->group(function(){
   //usuarios
   Route::resource('users','UserController');
 
+  //Areas
+  Route::resource('areas','AreasController');
+
   //asignaturas
   Route::resource('asignaturas','AsignaturaController')->except(['show']);
 
