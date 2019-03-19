@@ -12,16 +12,16 @@ class AreaSeeder extends Seeder
     public function run()
     {
         DB::table('areas')->insert([
-            'area'=>'Área Técnica',
+            'name'=>'Área Técnica',
         ]);
         DB::table('areas')->insert([
-            'area'=>'Área Biológica y Biomédica',
+            'name'=>'Área Biológica y Biomédica',
         ]);
         DB::table('areas')->insert([
-            'area'=>'Área Administrativa',
+            'name'=>'Área Administrativa',
         ]);
         DB::table('areas')->insert([
-            'area'=>'Área Sociohumanística',
+            'name'=>'Área Sociohumanística',
         ]);
     }
 }

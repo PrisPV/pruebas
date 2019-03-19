@@ -33,6 +33,21 @@ Breadcrumbs::for('areas.index', function ($trail) {
   $trail->push('Areas', route('areas.index'));
 });
 
+Breadcrumbs::for('areas.create', function ($trail) {
+  $trail->parent('areas.index');
+  $trail->push('Creacion de area', route('areas.create'));
+});
+
+Breadcrumbs::for('areas.show', function ($trail, $area) {
+  $trail->parent('areas.index');
+  $trail->push('Vista de area: '.$area->name, route('areas.show',$area));
+});
+
+Breadcrumbs::for('areas.edit', function ($trail, $area) {
+  $trail->parent('areas.index');
+  $trail->push('Edicion de area: '.$area->name, route('area.edit',$area));
+});
+
 //Usuarios
 Breadcrumbs::for('users.index', function ($trail) {
   $trail->parent('home');

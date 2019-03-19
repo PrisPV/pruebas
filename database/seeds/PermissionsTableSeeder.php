@@ -66,6 +66,13 @@ class PermissionsTableSeeder extends Seeder
       'description'=>'Eliminar cualquier rol del sistema',
     ]);
 
+    //Areas
+    Permission::create([
+      'name'=>'Navegar areas',
+      'slug'=>'areas.index',
+      'description'=>'Lista y navega todos los usuarios del sistema',
+    ]);
+
     //Asignaturas
     Permission::create([
       'name'=>'Navegar asignaturas',

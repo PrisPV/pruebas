@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Areas extends Model
 {
     protected $fillable = [
-        'area',
+        'name',
       ];
       public function asignaturas(){
         return $this->hasMany('App\Asignatura');
