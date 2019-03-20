@@ -4,10 +4,10 @@
 @endsection
 @section('content')
 <div class="card">
-  <div class="card-header">Rol</div>
+<p>hola</p>
+<div class="card-header">Area: {{$area->name}}</div>
   <div class="card-body">
-    <p><strong>Nombre</strong> {{$area->name}}</p>
-    <p><strong>Descripcion</strong> {{$area->id}}</p>
+    <p><strong>Nombre</strong> {{$area->nombre}}</p>
   </div>
 </div>
 @endsection

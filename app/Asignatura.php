@@ -13,7 +13,6 @@ class Asignatura extends Model
   */
   protected $fillable = [
     'nombre',
-    'area_id'
   ];
 
   public function areas()

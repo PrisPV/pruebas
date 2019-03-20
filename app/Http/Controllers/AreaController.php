@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Areas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\AsignaturaRequest;
+use App\Http\Requests\AreaRequest;
 
-class AreasController extends Controller
+class AreaController extends Controller
 {
 
   public function __construct(){
@@ -51,7 +51,7 @@ class AreasController extends Controller
   */
   public function store(AreaRequest $request)
   {
-    $area = Area::create($request->all());
+    $area = Areas::create($request->all());
     return redirect()->route('areas.edit',$area->id)->with('info','Area creada con exito');
   }
 
@@ -61,7 +61,7 @@ class AreasController extends Controller
   * @param  \App\Areas  $area
   * @return \Illuminate\Http\Response
   */
-  public function show(Area $area)
+  public function show(Areas $area)
   {
     return view('areas.show',compact('area'));
   }
@@ -72,7 +72,7 @@ class AreasController extends Controller
   * @param  \App\Areas  $area
   * @return \Illuminate\Http\Response
   */
-  public function edit(Areas $area)
+  public function edit(Area $area)
   {
     return view('areas.edit',compact('area'));
   }

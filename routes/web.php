@@ -31,7 +31,7 @@ Route::middleware(['auth'])->group(function(){
   Route::resource('users','UserController');
 
   //Areas
-  Route::resource('areas','AreasController');
+  Route::resource('areas','AreaController');
 
   //asignaturas
   Route::resource('asignaturas','AsignaturaController')->except(['show']);

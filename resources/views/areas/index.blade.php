@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('breadcrumbs')
 {{ Breadcrumbs::render('areas.index') }}
-{{ Breadcrumbs::render('asignaturas.index') }}
 @endsection
 @section('content')
 <div class="card">
@@ -18,7 +17,7 @@
       <tbody>
         @foreach($areas as $area)
         <tr>
-          <td>{{$area->area_id}}</td>
+          <td>{{$area->id}}</td>
           <td>{{$area->name}}</td>
           <td width="10px">
             <div class="dropdown">
@@ -26,8 +25,8 @@
                 Acciones
               </button>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                @can('asignaturas.index')
-                <a href="{{route('areas.index',$area->area_id)}}" class="dropdown-item">Ver Reporte</a>
+                @can('areas.index')
+                <a href="{{route('areas.show',$area->id)}}" class="dropdown-item">Ver Reporte</a>
                 @endcan
               </div>
           </td>

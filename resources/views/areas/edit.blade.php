@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('breadcrumbs')
-{{ Breadcrumbs::render('areas.edit', $role) }}
+{{ Breadcrumbs::render('areas.edit', $area) }}
 @endsection
 @section('content')
 <div class="card">
-  <div class="card-header">Rol</div>
+  <div class="card-header">AreaS</div>
   <div class="card-body">
-    {!!Form::model($role,['route'=>['areas.update',$role->id],'method'=>'put'])!!}
+    {!!Form::model($area,['route'=>['areas.update',$area->id],'method'=>'put'])!!}
     @include('areas.partials.form')
     {!!Form::close()!!}
   </div>
