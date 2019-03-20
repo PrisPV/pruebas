@@ -35,7 +35,7 @@ class AsignaturasTableSeeder extends Seeder
       'nombre'=>'Base de datos avanzada',
     ]);
     Asignatura::create([
-      'nombre'=>'Ingenería de Requisitos',
+      'nombre'=>'Ingeniería de Requisitos',
     ]);
     Asignatura::create([
       'nombre'=>'Sistemas Operativos',

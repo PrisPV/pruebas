@@ -70,7 +70,7 @@ class PermissionsTableSeeder extends Seeder
     Permission::create([
       'name'=>'Navegar areas',
       'slug'=>'areas.index',
-      'description'=>'Lista y navega todos los usuarios del sistema',
+      'description'=>'Lista y navega las areas del sistema',
     ]);
 
     //Asignaturas
