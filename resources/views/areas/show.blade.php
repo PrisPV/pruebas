@@ -4,7 +4,6 @@
 @endsection
 @section('content')
 <div class="card">
-<p>hola</p>
 <div class="card-header">Reporte</div>
   <div class="card-body">
     <table id="areas" class="table table-striped table-hover">
