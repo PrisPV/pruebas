@@ -9,18 +9,21 @@
     <table id="areas" class="table table-striped table-hover">
       <thead>
         <tr>
-          <th>Area</th>
           <th>Asignatura</th>
           <th>Cuestionario</th>
+          <th>Estado</th>
         </tr>
       </thead>
       <tbody>
+      @foreach($area->asignaturas as $asignatura)
         <tr>
-          <td>{{$area->name}}</td>
-          <td>{{$area->asignaturas}}</td>
-          <td>{{implode(',',$area->asignaturas->pluck('name')->toArray())}}</td>
-          <td></td>
+          <td>{{$asignatura->nombre}}</td>
+          @foreach($asignatura->cuestionarios as $cuestionario)
+          <td>{{$cuestionario->descripcion}}</td>
+          <td>{{$cuestionario->estado}}</td>
+          @endforeach   
         </tr>
+      @endforeach  
       </tbody>
     </table>
   </div>
