@@ -11,5 +11,6 @@ class Areas extends Model
       ];
       public function asignaturas(){
         return $this->belongsToMany('App\Asignatura');
+        dd($areas);
       }
 }

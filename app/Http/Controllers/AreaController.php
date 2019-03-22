@@ -63,6 +63,7 @@ class AreaController extends Controller
   */
   public function show(Areas $area)
   {
+    //dd($area);
     return view('areas.show',compact('area'));
   }
 
