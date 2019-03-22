@@ -15,11 +15,11 @@ class CreateAreaAsignaturaTable extends Migration
     {
         Schema::create('area_asignatura', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreign('area_fk')->references('id')->on('areas')->onDelete('cascade');
-            $table->integer('area_fk')->unsigned()->index();
+            $table->foreign('area_id')->references('id')->on('areas')->onDelete('cascade');
+            $table->integer('area_id')->unsigned()->index();
 
-            $table->foreign('asignatura_fk')->references('id')->on('asignaturas')->onDelete('cascade');
-            $table->integer('asignatura_fk')->unsigned()->index();
+            $table->foreign('asignatura_id')->references('id')->on('asignaturas')->onDelete('cascade');
+            $table->integer('asignatura_id')->unsigned()->index();
         });
     }
 

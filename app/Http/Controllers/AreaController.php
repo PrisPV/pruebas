@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Areas;
+use App\Area;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\AreaRequest;
@@ -26,11 +26,11 @@ class AreaController extends Controller
   {
     $user = Auth::user();
     if($user->esAdministrador()){
-      $areas = Areas::paginate();
+      $area= Area::paginate();
     }else{
-      $areas = $user->areas()->paginate();
+      $area = $user->areas()->paginate();
     }
-    return view('areas.index',compact('areas'));
+    return view('areas.index',compact('area'));
   }
 
   /**
@@ -51,26 +51,26 @@ class AreaController extends Controller
   */
   public function store(AreaRequest $request)
   {
-    $area = Areas::create($request->all());
+    $area = Area::create($request->all());
     return redirect()->route('areas.edit',$area->id)->with('info','Area creada con exito');
   }
 
   /**
   * Display the specified resource.
   *
-  * @param  \App\Areas  $area
+  * @param  \App\Area  $area
   * @return \Illuminate\Http\Response
   */
-  public function show(Areas $area)
+  public function show(Area $area)
   {
-    //dd($area);
+    //dd($area->asignaturas);
     return view('areas.show',compact('area'));
   }
 
   /**
   * Show the form for editing the specified resource.
   *
-  * @param  \App\Areas  $area
+  * @param  \App\Area  $area
   * @return \Illuminate\Http\Response
   */
   public function edit(Area $area)
@@ -82,7 +82,7 @@ class AreaController extends Controller
   * Update the specified resource in storage.
   *
   * @param  \Illuminate\Http\Request  $request
-  * @param  \App\Areas  $area
+  * @param  \App\Area  $area
   * @return \Illuminate\Http\Response
   */
   public function update(AsignaturaRequest $request, Asignatura $area)
@@ -94,7 +94,7 @@ class AreaController extends Controller
   /**
   * Remove the specified resource from storage.
   *
-  * @param  \App\Areas  $area
+  * @param  \App\Area $area
   * @return \Illuminate\Http\Response
   */
   public function destroy(Area $area)

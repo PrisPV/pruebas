@@ -17,13 +17,12 @@
       <tbody>
         <tr>
           <td>{{$area->name}}</td>
-          <td>{{$area->id}}</td>
+          <td>{{$area->asignaturas}}</td>
+          <td>{{implode(',',$area->asignaturas->pluck('name')->toArray())}}</td>
           <td></td>
         </tr>
       </tbody>
     </table>
-
-
   </div>
 </div>
 @endsection
