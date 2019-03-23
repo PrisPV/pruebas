@@ -4,7 +4,7 @@
 @endsection
 @section('content')
 <div class="card">
-<div class="card-header">Reporte</div>
+<div class="card-header">Reporte de {{$area->name}}</div>
   <div class="card-body">
     <table id="areas" class="table table-striped table-hover">
       <thead>
@@ -17,8 +17,8 @@
       <tbody>
       @foreach($area->asignaturas as $asignatura)
         <tr>
-          <td>{{$asignatura->nombre}}</td>
           @foreach($asignatura->cuestionarios as $cuestionario)
+          <td>{{$asignatura->nombre}}</td>
           <td>{{$cuestionario->descripcion}}</td>
           <td>{{$cuestionario->estado}}</td>
           @endforeach   
