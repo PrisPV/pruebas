@@ -19,6 +19,7 @@ class CreateSolucionesTable extends Migration
       $table->integer('intentos')->default(1);
       $table->datetime('fecha_limite');
       $table->datetime('fecha_asignado');
+      $table->datetime('fecha_inicio')->nullable();
       $table->datetime('fecha_resuelto')->nullable();
       $table->decimal('nota')->nullable();
       $table->string('estado');

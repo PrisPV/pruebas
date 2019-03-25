@@ -31,6 +31,8 @@
           <th>Nota</th>
           <th>Fecha asignacion</th>
           <th>Fecha resuelto</th>
+          <th>Fecha inicio</th>
+          <th>Duración</th>
           <th>Acciones</th>
         </tr>
       </thead>
@@ -42,6 +44,8 @@
           <td>{{$solucion->nota}}/100</td>
           <td>{{$solucion->fecha_asignado}}</td>
           <td>{{$solucion->fecha_resuelto}}</td>
+          <td>{{$solucion->fecha_inicio}}</td>
+          <td>{{$solucion->duracion}}</td>
           <td>
             @can('cuestionarios.solucion')
             <a href="{{route('cuestionarios.solucion',[$asignatura->id,$solucion->id])}}" class="btn btn-sm btn-default">Ver</a>

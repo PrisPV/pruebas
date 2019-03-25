@@ -180,6 +180,7 @@ class CuestionarioController extends Controller
   */
   public function rendirSave(Request $request,Asignatura $asignatura,Solucion $solucion)
   {
+    $solucion->fecha_inicio = now();
     foreach ($solucion->preguntas as $pregunta) {
       if(isset($request->respuestas[$pregunta->id])){
         $respuesta = $request->respuestas[$pregunta->id];

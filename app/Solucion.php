@@ -21,11 +21,13 @@ class Solucion extends Model
     'intentos',
     'fecha_limite',
     'fecha_asignado',
+    'fecha_inicio',
     'fecha_resuelto',
     'nota',
     'estado',
     'user_id',
     'cuestionario_id'
+  
   ];
 
   public function user()
