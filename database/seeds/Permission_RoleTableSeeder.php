@@ -114,5 +114,9 @@ class Permission_RoleTableSeeder extends Seeder
             'permission_id'=>'21',
             'role_id'=>'3',
         ]);
+        DB::table('permission_role')->insert([
+            'permission_id'=>'22',
+            'role_id'=>'3',
+        ]);
     }
 }
