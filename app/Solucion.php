@@ -29,6 +29,13 @@ class Solucion extends Model
     'cuestionario_id'
   
   ];
+  
+  protected $dates = [
+    'fecha_limite',
+    'fecha_asignado',
+    'fecha_inicio',
+    'fecha_resuelto'
+];
 
   public function user()
   {

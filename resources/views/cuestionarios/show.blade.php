@@ -16,7 +16,6 @@
     <p><strong>Descripcion:</strong> {{$cuestionario->descripcion}}</p>
     <p><strong>Intentos permitidos:</strong> {{$cuestionario->intentos}}</p>
     <p><strong>Fecha límite:</strong> {{$cuestionario->fecha_limite}}</p>
-    <p><strong>Fecha de creacion:</strong> {{$cuestionario->created_at}}</p>
   </div>
 </div>
 <hr>
@@ -29,9 +28,8 @@
           <th>Estudiante</th>
           <th>Intento</th>
           <th>Nota</th>
-          <th>Fecha asignacion</th>
+          <th>Fecha límite</th>
           <th>Fecha resuelto</th>
-          <th>Fecha inicio</th>
           <th>Duración</th>
           <th>Acciones</th>
         </tr>
@@ -42,10 +40,9 @@
           <td>{{$solucion->user->name}}</td>
           <td>{{$solucion->intentos}}</td>
           <td>{{$solucion->nota}}/100</td>
-          <td>{{$solucion->fecha_asignado}}</td>
+          <td>{{$solucion->fecha_limite}}</td>
           <td>{{$solucion->fecha_resuelto}}</td>
-          <td>{{$solucion->fecha_inicio}}</td>
-          <td>{{$solucion->duracion}}</td>
+          <td>{{$solucion->fecha_inicio->diffInMinutes($solucion->fecha_resuelto)}} min </td>
           <td>
             @can('cuestionarios.solucion')
             <a href="{{route('cuestionarios.solucion',[$asignatura->id,$solucion->id])}}" class="btn btn-sm btn-default">Ver</a>

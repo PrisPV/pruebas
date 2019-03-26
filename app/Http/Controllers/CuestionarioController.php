@@ -141,6 +141,7 @@ class CuestionarioController extends Controller
       $solucion = $user->soluciones()->where('estado','En proceso')->where('cuestionario_id',$cuestionario->id)->first();
       if(!$solucion){
         $solucion = new Solucion();
+        $solucion->fecha_inicio = now();
         $solucion->descripcion = $cuestionario->descripcion;
         $solucion->intentos = $cuestionario->soluciones()->count() + 1;
         $solucion->fecha_limite = $cuestionario->fecha_limite;
@@ -180,7 +181,6 @@ class CuestionarioController extends Controller
   */
   public function rendirSave(Request $request,Asignatura $asignatura,Solucion $solucion)
   {
-    $solucion->fecha_inicio = now();
     foreach ($solucion->preguntas as $pregunta) {
       if(isset($request->respuestas[$pregunta->id])){
         $respuesta = $request->respuestas[$pregunta->id];
