@@ -2,7 +2,7 @@
 @section('breadcrumbs')
 {{ Breadcrumbs::render('cuestionarios.show', $asignatura, $cuestionario) }}
 @endsection
-@section('content')
+@section('content')onclick="alertaRendirCuestionario();"
 <div class="card">
   <div class="card-header">
     Cuestionario
