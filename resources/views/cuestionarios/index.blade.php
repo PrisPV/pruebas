@@ -47,7 +47,7 @@
                 @endcan
                 @can('cuestionarios.destroy')
                 {!! Form::open(['route'=>['cuestionarios.destroy',$asignatura->id,$cuestionario->id],'method'=>'delete']) !!}
-                <button class="dropdown-item">Eliminar</button>
+                <button class="dropdown-item" onclick="return confirm('Eliminar cuestionario. Desea continuar?')";>Eliminar</button>
                 {!! Form::close() !!}
                 @endcan
               </div>

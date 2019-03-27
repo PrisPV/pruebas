@@ -39,7 +39,7 @@
                 @endcan
                 @can('opciones.destroy')
                 {!! Form::open(['route'=>['opciones.destroy',$pregunta->id,$opcion->id],'method'=>'delete']) !!}
-                <button class="dropdown-item">Eliminar</button>
+                <button class="dropdown-item" onclick="return confirm('Eliminar opción. Desea continuar?')";>Eliminar</button>
                 {!! Form::close() !!}
                 @endcan
               </div>

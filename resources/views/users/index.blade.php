@@ -40,7 +40,7 @@
                 @endcan
                 @can('users.destroy')
                 {!! Form::open(['route'=>['users.destroy',$user->id],'method'=>'delete']) !!}
-                <button class="dropdown-item">Eliminar</button>
+                <button class="dropdown-item" onclick="return confirm('Eliminar usuario. Desea continuar?')";>Eliminar</button>
                 {!! Form::close() !!}
                 @endcan
               </div>

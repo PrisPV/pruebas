@@ -40,7 +40,7 @@
                 @if($role->slug!='admin' && $role->slug!='profesor' && $role->slug!='estudiante')
                 @can('roles.destroy')
                 {!! Form::open(['route'=>['roles.destroy',$role->id],'method'=>'delete']) !!}
-                <button class="dropdown-item">Eliminar</button>
+                <button class="dropdown-item" onclick="return confirm('Eliminar rol. Desea continuar?')";>Eliminar</button>
                 {!! Form::close() !!}
                 @endcan
                 @endif
