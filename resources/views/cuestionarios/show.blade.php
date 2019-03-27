@@ -7,7 +7,7 @@
   <div class="card-header">
     Cuestionario
     @can('cuestionarios.rendir')
-    @if($cuestionario->intentos>$cuestionario->soluciones()->count())
+    @if($cuestionario->intentos>$cuestionario->soluciones()->where('user_id',Auth::id())->count())
     <a href="#" class="btn btn-sm btn-primary float-right" onclick="alertaRendirCuestionario();">Rendir cuestionario</a>
     @endif
     @endcan
