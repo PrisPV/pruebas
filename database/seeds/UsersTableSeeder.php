@@ -47,7 +47,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Erika Pila';
+    $user->name = 'Pila Erika';
     $user->email = 'eppila1@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1724523640';
@@ -58,7 +58,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Andrea Villalba';
+    $user->name = 'Villalba Andrea';
     $user->email = 'avillalba@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1720731320';
@@ -69,7 +69,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Juan Pablo Cabezas';
+    $user->name = 'Cabezas Juan Pablo';
     $user->email = 'jpcabezas@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1724476997';
@@ -80,8 +80,8 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Luis Ordonez';
-    $user->email = 'lordonez@utpl.edu.ec';
+    $user->name = 'Armijos Luis';
+    $user->email = 'larmijos@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1725351736';
     $user->password = Hash::make('lordonez');
@@ -91,7 +91,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Diana Ortiz';
+    $user->name = 'Ortiz Diana';
     $user->email = 'odiana@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1721022661';
@@ -102,7 +102,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Gabriel Paredes';
+    $user->name = 'Paredes Gabriel';
     $user->email = 'gparedes@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1726025008';
@@ -114,7 +114,7 @@ class UsersTableSeeder extends Seeder
     }
     $user = new User();
     $user->name = 'Nataly Quintana';
-    $user->email = 'nquintana@utpl.edu.ec';
+    $user->email = 'Quintana Nataly';
     $user->email_verified_at = now();
     $user->cedula ='1757504491';
     $user->password = Hash::make('nquintana');
@@ -124,7 +124,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Paola Romero';
+    $user->name = 'Romero Paola';
     $user->email = 'promero@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1726551599';
@@ -135,7 +135,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Daniela Salazar';
+    $user->name = 'Salazar Daniela';
     $user->email = 'dsalazar@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1725006322';
@@ -146,7 +146,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Nancy Lopez';
+    $user->name = 'Lopez Nancy';
     $user->email = 'nlopez@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1713955951';
@@ -157,7 +157,7 @@ class UsersTableSeeder extends Seeder
       $user->roles()->attach($role->id);
     }
     $user = new User();
-    $user->name = 'Felipe Teran';
+    $user->name = 'Teran Felipe';
     $user->email = 'fteran@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1714835087';
@@ -169,7 +169,7 @@ class UsersTableSeeder extends Seeder
     }
 
 $user = new User();
-$user->name = 'Francisco Aguirre';
+$user->name = 'Aguirre Francisco';
 $user->email = 'faguirre@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1721348942';
@@ -181,7 +181,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Byron Dominguez';
+$user->name = 'Dominguez Byron';
 $user->email = 'bdominguez@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1716288517';
@@ -193,8 +193,8 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Jorge Dueñas';
-$user->email = 'jduenas@utpl.edu.ec';
+$user->name = 'Perez Jorge';
+$user->email = 'jperez@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1717278590';
 $user->password = Hash::make('jduenas');
@@ -205,7 +205,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Freddy Duque';
+$user->name = 'Duque Freddy';
 $user->email = 'fduque@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1721582599';
@@ -217,7 +217,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Ricardo Fajardo';
+$user->name = 'Fajardo Ricardo';
 $user->email = 'rfajardo@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1723563324';
@@ -229,7 +229,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Jorge Flores';
+$user->name = 'Flores Jhon';
 $user->email = 'jflores@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1721104857';
@@ -241,7 +241,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Fabian Garcia';
+$user->name = 'Garcia Fabian';
 $user->email = 'fgarcia@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='0502501505';
@@ -253,7 +253,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'David Hurtado';
+$user->name = 'Hurtado David';
 $user->email = 'dhurtado@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='0850035684';
@@ -265,7 +265,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Cristian Jarrin';
+$user->name = 'Jarrin Cristian';
 $user->email = 'cjarrin@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1717265936';
@@ -277,7 +277,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Jaime Mejia';
+$user->name = 'Mejia Jaime';
 $user->email = 'jmejia@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='0401356035';
@@ -289,7 +289,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Gabriel Ortega';
+$user->name = 'Ortega Gabriel';
 $user->email = 'gortega@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1718324948';
@@ -301,7 +301,7 @@ $user->roles()->attach($role->id);
 }
 
 $user = new User();
-$user->name = 'Enrique Calero';
+$user->name = 'Calero Enrique';
 $user->email = 'ecalero@utpl.edu.ec';
 $user->email_verified_at = now();
 $user->cedula ='1720074127';

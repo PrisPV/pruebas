@@ -22,6 +22,17 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('home/searchredirect', function(){
+     
+  /* Nuevo: si el argumento search está vacío regresar a la página anterior */
+  if (empty(Input::get('search'))) return redirect()->back();
+  
+  $search = urlencode(e(Input::get('search')));
+  $route = "home/search/$search";
+  return redirect($route);
+});
+Route::get("home/search/{search}", "HomeController@search");
+
 //Rutas
 Route::middleware(['auth'])->group(function(){
   //roles

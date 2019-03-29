@@ -229,6 +229,7 @@ return [
         /*Se agregar alias para acceder a las funcionalidades de una forma mas sencilla*/
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Input' => Illuminate\Support\Facades\Input::class,
 
     ],
 

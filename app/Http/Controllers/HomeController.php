@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Solucion;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,24 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function search($search){
+        $search = urldecode($search);
+
+        $users = User::select()
+                ->where('name', 'LIKE', '%'.$search.'%')
+                ->orderBy('id', 'desc')
+                ->get();
+        
+        if (count($users) == 0){
+            return View('search')
+            ->with('message', 'No hay resultados que mostrar')
+            ->with('search', $search);
+        } else{
+            return View('search')
+            ->with('comments', $users)
+            ->with('search', $search);
+        }
     }
 }

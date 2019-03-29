@@ -6,11 +6,9 @@
 <div class="card">
   <div class="card-header">
     Asignaturas
-    @can('asignaturas.create')
-    <a href="{{route('asignaturas.create')}}" class="btn btn-sm btn-primary float-right">Crear</a>
+    @can('asignaturas.create')<a href="{{route('asignaturas.create')}}" class="btn btn-sm btn-primary float-right">Crear</a>
     @endcan
   </div>
-
   <div class="card-body table-responsive">
     <table class="table table-striped table-hover">
       <thead>
