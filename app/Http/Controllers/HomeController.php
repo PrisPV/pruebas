@@ -42,7 +42,7 @@ class HomeController extends Controller
             ->with('search', $search);
         } else{
             return View('search')
-            ->with('comments', $users)
+            ->with('users', $users)
             ->with('search', $search);
         }
     }
