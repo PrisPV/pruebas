@@ -114,7 +114,7 @@ class UsersTableSeeder extends Seeder
     }
     $user = new User();
     $user->name = 'Nataly Quintana';
-    $user->email = 'Quintana Nataly';
+    $user->email = 'nquinta@utpl.edu.ec';
     $user->email_verified_at = now();
     $user->cedula ='1757504491';
     $user->password = Hash::make('nquintana');

@@ -16,8 +16,8 @@
       </thead>
       <tbody>
       @foreach($area->asignaturas as $asignatura)
+      @foreach($asignatura->cuestionarios as $cuestionario)
         <tr>
-          @foreach($asignatura->cuestionarios as $cuestionario)
           <td>{{$asignatura->nombre}}</td>
           <td>{{$cuestionario->descripcion}}</td>
           <td>{{$cuestionario->estado}}</td>
